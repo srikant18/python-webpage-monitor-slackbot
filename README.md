@@ -1,12 +1,12 @@
-python-webpage-monitor-slackbot
+python-webpage-monitor-slackbot:
 =============
 A slackbot that monitors webpages (or webpage elements) and provides notifications of any updates that occur.
 
-Description
+Description:
 =============
 WebMonitorBot is Slack's Python-based [real-time messaging bot](https://github.com/slackhq/python-rtmbot) which uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) to monitor changes in web pages.  Currently, it is hardcoded to check for web page updates every 30 seconds and produces a message when updates have occurred.  
 
-Usage
+Usage:
 =============
 There are two ways to monitor web pages using the bot:  
 * **monitor** *url*: the 'monitor' command points the bot at *url* and monitors the entire webpage.  However, many webpages have trivial dynamic content and are thus susceptible to displaying changes that are not meaningful. In such cases, this is not an ideal method to use. I'm working on a future release to try to discount much of this trivial content. This command will indicate when changes to the page have occurred but not display what the changes are.  
@@ -17,16 +17,16 @@ There are two ways to monitor web pages using the bot:
   
 In both cases, the trigger word must be the first word in the message, and monitoring will not occur if additional words are added after the final input.
   
-Other Methods
+Other Methods:
 ------------
 * **quit_monitor**: stops any current webpage monitoring
 
-Example Usage
+Example Usage:
 ------------
 Below is an example of using webmonitorbot to monitor HackerNews, using both **monitor** for the entire page and **monitor_id** to check for score updates on a particular article:  
 ![WebPageMonitor Bot in Action](screenshots/hacker_news_example.PNG)
   
-Dependencies
+Dependencies:
 ----------
 * [websocket-client](https://pypi.python.org/pypi/websocket-client/)
 * [python-slackclient](https://github.com/slackhq/python-slackclient)
